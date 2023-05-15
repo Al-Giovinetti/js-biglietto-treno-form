@@ -16,7 +16,7 @@
         <h1 class="p-3 text-danger fw-bold">MY ~ TRAIN</h1>
     </header>
     <main class="container-fluid p-0 ">
-        <div class=" row mx-3 border rounded mb-3 bg-primary-subtle">
+        <div class=" row mx-3 border rounded mb-3 bg-primary-subtle  need-validationnovalidate">
             <div class="col-12 col-md-6 mb-3">
                 <label for="user-name" class="form-label">Inserisci nome e cognome del viaggiatore: </label>
                 <input type="text" class="form-control" name="user-name" id="user-name">
@@ -35,10 +35,10 @@
                 <div id="emailHelp" class="form-text">Una copia del biglietto arriverà anche nella tua posta</div>
             </div>
             <div class="col-12 col-md-6 mb-3">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                 <label class="form-check-label me-2" for="exampleCheck1">Accetta le condizioni</label>
-                <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                <label class="form-check-label" for="exampleCheck1">Non sono un robot</label>
+                <input type="checkbox" class="form-check-input" id="exampleCheck2" required>
+                <label class="form-check-label" for="exampleCheck1" >Non sono un robot</label>
             </div>    
             <div class="col-12 text-center">
                 <button class="btn btn-primary w-auto mb-2">
@@ -70,9 +70,9 @@
                 </div>
             </div>
             <span class="d-block p-2"> oppure</span>
-            <button class="btn btn-primary w-auto mb-3">
+            <submit class="btn btn-primary w-auto mb-3" >
                 Conferma operazione
-            </button>
+            </submit>
         </div>
     
     </main>
