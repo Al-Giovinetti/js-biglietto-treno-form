@@ -5,32 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-train</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/myscript.js" defer></script>
 
 </head>
 <body>
-    <header>
-        <h1>My ~ Train</h1>
+    <header class="mb-3 bg-primary">
+        <h1 class="p-3 text-danger fw-bold">MY ~ TRAIN</h1>
     </header>
-    <div>
-        <label for="user-km">Inserisci i km da percorrere:</label>
-        <input type="number" name="user-km" id="user-km">
-    </div>
-    <div>
-        <label for="user-km">Inserisci l' età del passeggero:</label>
-        <input type="number" name="user-age" id="user-age">
-    </div>
-    <div>
-        <button>
-            Calcola
-        </button>
-    </div>
-    <div>
-        <h2>Il viaggio avrà un costo di:</h2>
-        <p></p>
-    </div>
+    <main class="container-fluid p-0 ">
+        <div class=" row mx-3 border rounded mb-3 bg-primary-subtle">
+            <div class="col-12 col-md-6 mb-3">
+                <label for="user-name" class="form-label">Inserisci nome e cognome del viaggiatore: </label>
+                <input type="text" class="form-control" name="user-name" id="user-name">
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <label for="user-km" class="form-label">Inserisci i km da percorrere:</label>
+                <input type="number" class="form-control" name="user-km" id="user-km">
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <label for="user-km" class="form-label">Inserisci l' età del viaggiatore:</label>
+                <input type="number" class="form-control" name="user-age" id="user-age">
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <label for="user-name" class="form-label">Inserisci la tua mail: </label>
+                <input type="email" class="form-control mb-2" id="user-mail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Una copia del biglietto arriverà anche nella tua posta</div>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label me-2" for="exampleCheck1">Accetta le condizioni</label>
+                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                <label class="form-check-label" for="exampleCheck1">Non sono un robot</label>
+            </div>    
+            <div class="col-12 text-center">
+                <button class="btn btn-primary w-auto mb-2">
+                    Calcola
+                </button>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center bg-primary-subtle">
+            <h2 class="fs-4">Il viaggio avrà un costo di:</h2>
+            <p></p>
+        </div>
+        <div class="text-center">
+            <hr>
+            <button class="btn btn-primary w-auto" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Ricontrolla dati inseriti
+            </button>
+            <div class="offcanvas offcanvas-start bg-warning" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Riepilogo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body text-start">
+                    <div>
+                        <p id="bis-username">Nominativo passeggero :</p>
+                        <p id="bis-km">Il biglietto è per :</p>
+                        <p id="bis-age">L' età del passereo è :</p>
+                        <p id="bis-mail">L' email inserita è :</p>
+                    </div>
+                </div>
+            </div>
+            <span class="d-block p-2"> oppure</span>
+            <button class="btn btn-primary w-auto mb-3">
+                Conferma operazione
+            </button>
+        </div>
+    
+    </main>
 
+   
+   
     
 </body>
 </html>
