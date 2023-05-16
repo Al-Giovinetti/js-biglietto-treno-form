@@ -1,23 +1,24 @@
 const inputKm = document.getElementById("user-km");
 const inputAge = document.getElementById("user-age");
 
-const inputName = document.getElementById("user-name")
-const inputMail = document.getElementById("user-mail")
+const inputName = document.getElementById("user-name");
+const inputMail = document.getElementById("user-mail");
 
 const button = document.querySelector("button");
 
 button.addEventListener("click",
     function(){
-        let price =inputKm.value * 0.233
+        let price = parseInt(inputKm.value * 0.233)
         const outputPrice = document.querySelector('p');
+        
         console.log(typeof(inputAge.value))
         console.log(typeof(inputKm.value))
 
 
-        if(isNaN(inputAge.value) || isNaN(inputKm.value)){
+        if(isNaN(parseInt(inputAge.value)) || isNaN(parseInt(inputKm.value))){
+            inputAge.classList.add("bg-danger");
+            inputKm.classList.add("bg-danger");
             price="Qualcosa è andato storto, ricontrolla i dati";
-            inputAge.classList.add("bg-danger");
-            inputAge.classList.add("bg-danger");
         }else if (inputAge.value < 18){
             price= price - (( price / 100) * 19.4)
             console.log(price + " minorenne")
