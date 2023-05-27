@@ -20,17 +20,17 @@ button.addEventListener("click",
             inputKm.classList.add("bg-danger");
             price="Qualcosa è andato storto, ricontrolla i dati";
         }else if (inputAge.value < 18){
-            price= price - (( price / 100) * 19.4)
-            console.log(price + " minorenne")
+            price= price - (( price / 100) * 19.4);
+            console.log(price + " minorenne");
         }else if(inputAge.value > 65){
-            price= price - (( price / 100) * 37.7)
-            console.log(price + " over 65")
+            price= price - (( price / 100) * 37.7);
+            console.log(price + " over 65");
         }else{
-            console.log(price + " normale")
+            console.log(price + " normale");
         }
 
-        console.log(typeof(inputAge.value))
-        console.log(typeof(inputKm.value))
+        console.log(typeof(inputAge.value));
+        console.log(typeof(inputKm.value));
 
 
         outputPrice.innerHTML = "€" +  price.toFixed(2);
